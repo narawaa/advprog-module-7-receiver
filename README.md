@@ -78,16 +78,16 @@ You can install Postman via this website: https://www.postman.com/downloads/
   - [x] Commit: `Implement list_all_as_string function in Notification repository.`
   - [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 - **STAGE 3: Implement services and controllers**
-  - [ ] Commit: `Create Notification service struct skeleton.`
-  - [ ] Commit: `Implement subscribe function in Notification service.`
-  - [ ] Commit: `Implement subscribe function in Notification controller.`
-  - [ ] Commit: `Implement unsubscribe function in Notification service.`
-  - [ ] Commit: `Implement unsubscribe function in Notification controller.`
-  - [ ] Commit: `Implement receive_notification function in Notification service.`
-  - [ ] Commit: `Implement receive function in Notification controller.`
-  - [ ] Commit: `Implement list_messages function in Notification service.`
-  - [ ] Commit: `Implement list function in Notification controller.`
-  - [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+  - [x] Commit: `Create Notification service struct skeleton.`
+  - [x] Commit: `Implement subscribe function in Notification service.`
+  - [x] Commit: `Implement subscribe function in Notification controller.`
+  - [x] Commit: `Implement unsubscribe function in Notification service.`
+  - [x] Commit: `Implement unsubscribe function in Notification controller.`
+  - [x] Commit: `Implement receive_notification function in Notification service.`
+  - [x] Commit: `Implement receive function in Notification controller.`
+  - [x] Commit: `Implement list_messages function in Notification service.`
+  - [x] Commit: `Implement list function in Notification controller.`
+  - [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 
@@ -106,3 +106,15 @@ This is the place for you to write reflections:
    Rust menghindari data race dengan tidak mengizinkan mutasi langsung pada variabel static. Rust memaksa kita menggunakan mekanisme yang eksplisit untuk memastikan akses data yang aman sehingga mencegah potensi bug terkait concurrency.
 
 #### Reflection Subscriber-2
+
+1. **Eksplorasi di luar langkah tutorial**
+
+   Yes. src/lib.rs berperan sebagai modul utama dalam proyek, tempat berbagai crate dan modul diimpor, serta berisi konfigurasi aplikasi seperti AppConfig.
+
+2. **Kemudahan menambah subscriber dan instance Main App dalam Observer Pattern**
+
+   Dengan Observer Pattern, menambahkan subscriber baru sangat praktis karena subscriber hanya perlu didaftarkan ke dalam sistem. Ketika suatu event terjadi, notifikasi akan langsung dikirim ke semua subscriber yang terdaftar. Jika ingin menambahkan lebih dari satu instance Main App, sistem tetap bisa berjalan dengan baik dengan mendaftarkan observer untuk setiap instance aplikasi yang berbeda melalui pengiriman permintaan HTTP ke API yang sesuai.
+
+3. **Pentingnya test dan dokumentasi di Postman**
+
+   Test sangat membantu dalam memastikan bahwa fitur bekerja sesuai harapan. Dokumentasi API di Postman juga sangat membantu. Dengan mendokumentasikan endpoint, parameter yang dibutuhkan, format respons, serta skenario error, developer lain dapat dengan mudah memahami dan menggunakan API yang telah dibuat. Dokumentasi juga bisa dimanfaatkan untuk testing langsung melalui Postman sehingga lebih efisien dalam memverifikasi respons.
